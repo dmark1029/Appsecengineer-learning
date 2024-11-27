@@ -1,0 +1,21 @@
+@mixin borderRadius($radius) {
+  border-radius: #{$radius}px !important;
+}
+
+$borderRadiusValues: (
+  2: 2,
+  4: 4,
+  6: 6,
+  8: 8,
+  10: 10,
+  12: 12,
+  16: 16,
+  20: 20,
+  24: 24
+);
+
+@each $value, $radius in $borderRadiusValues {
+  .br-#{value} {
+    @include borderRadius($radius);
+  }
+}

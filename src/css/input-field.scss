@@ -1,0 +1,92 @@
+@mixin placeholder($color) {
+  color: $color !important;
+  opacity: 1 !important;
+  font-weight: 500;
+}
+.base-input,
+.base-select,
+.base-field,
+.base-date-picker {
+  .q-textarea {
+    .q-field__native {
+      background-color: $grey-12 !important;
+    }
+  }
+  .q-field__control {
+    background-color: $grey-6;
+  }
+
+  .q-field--outlined .q-field__control:before {
+    border-color: $grey-12;
+    border-radius: 4px;
+  }
+  .q-field--outlined .q-field__control {
+    border-color: $grey-12;
+    border-radius: 4px;
+  }
+  .q-field--outlined.q-field--readonly .q-field__control:before {
+    border-style: solid;
+  }
+  .q-field__marginal {
+    color: $grey-10;
+  }
+  .q-placeholder,
+  .q-placeholder::-webkit-input-placeholder,
+  .q-placeholder:-moz-placeholder,
+  .q-placeholder::-moz-placeholder,
+  .q-placeholder:-ms-input-placeholder,
+  .q-placeholder::-ms-input-placeholder,
+  .q-placeholder::placeholder {
+    @include placeholder(black);
+  }
+
+  .q-field--dark {
+    .q-field__control {
+      background-color: #2b236c !important;
+    }
+    .q-field__control:before {
+      border-color: $dark-separator-color;
+      border-radius: 4px;
+    }
+    .q-field__control {
+      border-color: $dark-separator-color;
+      border-radius: 4px;
+    }
+    .q-field__label {
+      color: white;
+    }
+    .q-placeholder,
+    .q-placeholder::-webkit-input-placeholder,
+    .q-placeholder:-moz-placeholder,
+    .q-placeholder::-moz-placeholder,
+    .q-placeholder:-ms-input-placeholder,
+    .q-placeholder::-ms-input-placeholder,
+    .q-placeholder::placeholder {
+      @include placeholder(white);
+    }
+  }
+}
+
+.base-btn-dropdown {
+  border: 1px solid $grey-12;
+  .q-icon {
+    color: $grey-10;
+  }
+}
+
+.q-dark {
+  .base-btn-dropdown {
+    border: 1px solid $dark-separator-color;
+    .q-icon {
+      color: $grey-10;
+    }
+  }
+}
+
+.base-input {
+  .q-field__inner {
+    .q-field__control {
+      border-radius: 0.5rem !important;
+    }
+  }
+}
